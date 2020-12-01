@@ -14,7 +14,7 @@ def load(opt,test=False):
 		images_0 = np.load("{0}/images_train_new_128.npy".format(path))
 		images_1 = np.load("{0}/humansWbag_backRemoved_train_cc.npy".format(path))
 	
-	bags = np.load("{0}/bags_smaller_new_128.npy".format(path))
+	bags = np.load("{0}/bags_128.npy".format(path))
 	print(bags.shape)
 	print(images_0.shape)
 	print(images_1.shape)
