@@ -1,0 +1,1 @@
+stylegan2_pytorch --new --data ./path_to_training_images/ --image-size 128 --num-train-steps 40000 --models_dir "./path_to_model_dir/" --save_every 100 --network-capacity 24 --batch-size 7
