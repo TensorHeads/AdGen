@@ -38,8 +38,7 @@ with tf.device(opt.GPUdevice):
 # load data
 print(util.toMagenta("loading test data..."))
 path = "./my_data"
-bags = np.load("{0}/bags_smaller_new.npy".format(path))
-# bags = np.load("{0}/bags.npy".format(path))
+bags = np.load("{0}/bags_smaller_new_128.npy".format(path))
 
 # prepare model saver/summary writer
 saver_GP = tf.train.Saver(var_list=varsGP)
@@ -57,8 +56,12 @@ with tf.Session(config=tfConfig) as sess:
 	# create directories for test image output
 	os.makedirs("eval_{0}".format(opt.loadGP),exist_ok=True)
 	testImage = util.imread(opt.loadImage)
-	# import cv2
-	# testImage = cv2.resize(testImage,dsize=(144,144))
+
+	# resize input image size to 128*128
+	import cv2
+	testImage = cv2.resize(testImage,dsize=(128,128))
+	# end of resize code
+	
 	batch = data.makeBatchEval(opt,testImage,bags,PH)
 	runList = [imageCompAll[0],imageCompAll[-1]]
 	ic0,icf = sess.run(runList,feed_dict=batch)
