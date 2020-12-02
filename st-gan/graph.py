@@ -17,10 +17,7 @@ def geometric_multires(opt,imageBG,imageFG,p):
 		return tf.nn.avg_pool(x,[1,2,2,1],[1,2,2,1],"VALID")
 	def conv2Layer(opt,feat,imageConcat,outDim,dilation=False):
 		weight,bias = createVariable(opt,[4,4,int(feat.shape[-1]),outDim],stddev=opt.stdGP)
-		if dilation:
-			conv = tf.nn.conv2d(feat,weight,strides=[1,2,2,1],padding="SAME",dilations=1)+bias
-		else:
-			conv = tf.nn.conv2d(feat,weight,strides=[1,2,2,1],padding="SAME")+bias
+		conv = tf.nn.conv2d(feat,weight,strides=[1,2,2,1],padding="SAME",dilations= 1 if dilation else None)+bias
 		feat = tf.nn.relu(conv)
 		imageConcat = downsample(imageConcat)
 		feat = tf.concat([feat,imageConcat],axis=3)
@@ -70,10 +67,7 @@ def discriminator(opt,image,reuse=False):
 		return normalised_input * gains + biases
 	def conv2Layer(opt,feat,outDim,dilation=False):
 		weight,bias = createVariable(opt,[4,4,int(feat.shape[-1]),outDim],stddev=opt.stdD)
-		if dilation:
-			conv = tf.nn.conv2d(feat,weight,strides=[1,2,2,1],padding="SAME",dilations=1)+bias
-		else:
-			conv = tf.nn.conv2d(feat,weight,strides=[1,2,2,1],padding="SAME")+bias
+		conv = tf.nn.conv2d(feat,weight,strides=[1,2,2,1],padding="SAME",dilations=1 if dilation else None)+bias
 		conv_norm = layer_normalize(conv,conv.shape)
 		feat = leakyReLU(conv_norm)
 		return feat
@@ -95,7 +89,7 @@ def discriminator(opt,image,reuse=False):
 # composite background and object
 def composite(opt,imageBG,imageFG):
 	with tf.name_scope("composite"):
-		colorFG,maskFG = imageFG[:,:,:,:3],imageFG[:,:,:,3:]
+		colorFG,maskFG = imageFG[:,:,:,:3],imageFG[:,:,:,3:] # split the 4th channel into mask
 		colorFG = colorFG[:,:,:,::-1] # reverse RBG channels as the image was resized with opencv
 		imageComp = (colorFG*maskFG) + (imageBG*(1-maskFG))
 	return imageComp
