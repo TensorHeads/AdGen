@@ -29,4 +29,4 @@ More about the project: [Final Report](https://dlproject566.medium.com/adgen-an-
 
 * To run the **ST-GAN** model on the DeepFashion dataset: 
   * Please find all the training and test files in the **st-gan** folder and simply download the code along with the datasets available in the dataset google drive link and place the datasets in the **my_data** folder inside the **st-gan** folder. 
-  * Make sure to change the local paths in `data.py` and in the test and train scripts if you are running in Windows. 
+  * Make sure to change the local paths in `data.py` and in the test and train scripts if you are running on Windows. 
