@@ -13,7 +13,7 @@ print(targetArray[990], len(targetArray))
 with open('fasion-pairs-test_styleOP.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile, delimiter=',')
     writer.writerow(['', "from", "to"])
-    pathFiles = glob.glob("/Users/chinmayiprasad/Documents/DeepLearning/Project/Global-Flow-Local-Attention/styleOP_images/*.jpg")
+    pathFiles = glob.glob("./Global-Flow-Local-Attention/styleOP_images/*.jpg")
     for i in range(len(pathFiles)):
         randTargetPose = random.randint(0, len(targetArray) - 1)
         while "WOMEN" not in targetArray[randTargetPose] or "Pants" in targetArray[randTargetPose] or "Shorts" in targetArray[randTargetPose]:
