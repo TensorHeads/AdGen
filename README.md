@@ -2,7 +2,7 @@
 An Auto-Generator for Ads with Never-Seen-Before Humans
 ![](3.gif)
 
-More about the project: https://dlproject566.medium.com/adgen-an-auto-generator-for-ads-with-never-seen-before-humans-877f940bfc50
+More about the project: https://dlproject566.medium.com/adgen-an-auto-generator-for-ads-with-never-seen-before-humans-877f940bfc50  
 Addendum: https://tensorheads.github.io/
 
 * You will find all the dataset files in npy format at this Google Drive Link: https://drive.google.com/drive/folders/13HJxIfoGWk-g1r6SEXlX5DzqTzBuzhSF and the web crawled and pre-processed images in the CrawlingImages folder of this repo. 
