@@ -1,5 +1,6 @@
 # AdGen
-### An Auto-Generator for Ads with Never-Seen-Before Humans
+### An Auto-Generator for Ads with Never-Seen-Before Humans  
+
 
 <p align="center" width="100%">
     <img src="3.gif"> 
@@ -15,7 +16,7 @@ More about the project: [Final Report](https://dlproject566.medium.com/adgen-an-
 * To run the **GFLA** model: 
   * Clone the repository from the original paper found here: [GFLA repo](https://github.com/RenYurui/Global-Flow-Local-Attention) and then run the `test.py` file to generate the human models in the required poses. 
   * Run `createPairsCSV.py` to create the pairs that map the output of GFLA to output of **StyleGAN2**. 
-  * The output of the **StyleGAN2 + GFLA** method can be found in the `fashion_900.zip` file in the dataset Google Drive link[dataset](https://drive.google.com/drive/folders/13HJxIfoGWk-g1r6SEXlX5DzqTzBuzhSF).
+  * The output of the **StyleGAN2 + GFLA** method can be found in the `fashion_900.zip` file in the [dataset Google Drive link](https://drive.google.com/drive/folders/13HJxIfoGWk-g1r6SEXlX5DzqTzBuzhSF).
 
 * To run the **disentanglement** model: 
   * Clone the repository from the original paper found here: [Disentangled Person Image Generation Method repo](https://github.com/charliememory/Disentangled-Person-Image-Generation) and then run the `run_DF_test.sh` script to generate brand new humans in fixed poses sampled from noise and trained on **DeepFashion** Dataset.
