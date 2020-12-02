@@ -7,7 +7,7 @@
 </p>
 
 
-More about the project: [Final Report](https://dlproject566.medium.com/adgen-an-auto-generator-for-ads-with-never-seen-before-humans-877f940bfc50), [Addendum](https://tensorheads.github.io/)
+More about the project: [Medium Blog](https://dlproject566.medium.com/adgen-an-auto-generator-for-ads-with-never-seen-before-humans-877f940bfc50), [Addendum](https://tensorheads.github.io/), [Slides](https://drive.google.com/file/d/1Q1D9i2N5VwNhKTT7JmNe7zGsoz0GYN_i/view?usp=sharing)
 
 * You will find all the dataset files in npy format at this Google Drive Link: [dataset](https://drive.google.com/drive/folders/13HJxIfoGWk-g1r6SEXlX5DzqTzBuzhSF) and the web crawled and pre-processed images in the **CrawlingImages** folder of this repo. 
 
