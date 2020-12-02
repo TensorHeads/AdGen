@@ -18,15 +18,15 @@ More about the project: [Final Report](https://dlproject566.medium.com/adgen-an-
   * Run `createPairsCSV.py` to create the pairs that map the output of GFLA to output of **StyleGAN2**. 
   * The output of the **StyleGAN2 + GFLA** method can be found in the `fashion_900.zip` file in the dataset Google Drive.
 
-* To run the **disentanglement** model: 
+* To run the **Disentanglement** model: 
   * Clone the repository from the original paper found here: [Disentangled Person Image Generation Method repo](https://github.com/charliememory/Disentangled-Person-Image-Generation) and then run the `run_DF_test.sh` script to generate brand new humans in fixed poses sampled from noise and trained on **DeepFashion** Dataset.
   * You will also need to modify the code in `run_DF_test.sh` and `tester.py` to sample appearances and keep the poses fixed which is different from the default available in the files. 
-  * The 'G' folder in the dataset Google Drive link has the output of the **disentanglement** method. 
+  * The 'G' folder in the dataset Google Drive link has the output of the **Disentanglement** method. 
 
 * To calculate the MSE Loss or Inception scores of the **StyleGAN2 + GFLA** and **Disentanglement** approaches:
-  * You can use the files available inside comparisonOfModels folder of this repo. 
+  * You can use the files available inside **comparisonOfModels** folder of this repo. 
   * To calculate MSE Loss between input and output poses, run `mselosscalc.py` and replace the `estimator.py` file with the `estimator.py` file available in the repo. 
 
 * To run the **ST-GAN** model on the DeepFashion dataset: 
-  * Please find all the training and test files in the st-gan folder and simply download the code along with the datasets available in the dataset google drive link and place the datasets in the my_data folder inside the st-gan folder. 
+  * Please find all the training and test files in the **st-gan** folder and simply download the code along with the datasets available in the dataset google drive link and place the datasets in the **my_data** folder inside the **st-gan** folder. 
   * Make sure to change the local paths in `data.py` and in the test and train scripts if you are running in Windows. 
