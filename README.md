@@ -9,9 +9,9 @@ Addendum: https://tensorheads.github.io/
 
 * To run the StyleGAN2 model: Simply run the test.sh file available in the stylegan2 folder to generate images of brand new never-seen-before humans. 
 
-* To run the GFLA model: Clone the repository from the original paper found here: https://github.com/RenYurui/Global-Flow-Local-Attention and then run the test.py file to generate the human models in the required poses. Run createPairsCSV.py to create the pairs that map the output of GFLA to output of StyleGAN2.
+* To run the GFLA model: Clone the repository from the original paper found here: https://github.com/RenYurui/Global-Flow-Local-Attention and then run the test.py file to generate the human models in the required poses. Run createPairsCSV.py to create the pairs that map the output of GFLA to output of StyleGAN2. The output of the StyleGAN2 + GFLA method can be found in the fashion_900.zip file in the dataset Google Drive link.
 
-* To run the disentanglement model: Clone the repository from the original paper found here: https://github.com/charliememory/Disentangled-Person-Image-Generation and then run the run_DF_test.sh script to generate brand new humans in fixed poses sampled from noise and trained on DeepFashion Dataset. You will also need to modify the code in run_DF_test.sh and tester.py to sample appearances and keep the poses fixed which is different from the default available in the files. 
+* To run the disentanglement model: Clone the repository from the original paper found here: https://github.com/charliememory/Disentangled-Person-Image-Generation and then run the run_DF_test.sh script to generate brand new humans in fixed poses sampled from noise and trained on DeepFashion Dataset. You will also need to modify the code in run_DF_test.sh and tester.py to sample appearances and keep the poses fixed which is different from the default available in the files. The 'G' folder in the dataset Google Drive link has the output of the disentanglement method. 
 
 * To calculate the MSE Loss or Inception scores of the StyleGAN2 + GFLA and Disentanglement approaches, you can use the files available inside comparisonOfModels folder of this repo. To calculate MSE Loss between input and output poses, run mselosscalc.py and replace the estimator.py file with the estimator.py file available in the repo. 
 
