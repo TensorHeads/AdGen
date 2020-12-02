@@ -26,7 +26,7 @@ f = open('fasion-pairs-test.csv', 'r')
 line = f.readline()
 line = f.readline()
 
-# fr = open('/Users/raj/Desktop/DL - CS566/Project/test data for GCP/grabbed.csv', 'w')
+# fr = open('./grabbed.csv', 'w')
 
 find = []
 while line:
