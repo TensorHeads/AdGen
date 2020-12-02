@@ -5,14 +5,14 @@ import warp
 
 # load data
 def load(opt,test=False):
-	path = "./my_data"
+	path = "./my_data"	# change default path if needed, not recommended 
 
 	if test:
 		images_0 = np.load("{0}/images_test_new_128.npy".format(path))
-		images_1 = np.load("{0}/humansWbag_backRemoved_test_cc.npy".format(path))
+		images_1 = np.load("{0}/humansWbag_test.npy".format(path))
 	else:
 		images_0 = np.load("{0}/images_train_new_128.npy".format(path))
-		images_1 = np.load("{0}/humansWbag_backRemoved_train_cc.npy".format(path))
+		images_1 = np.load("{0}/humansWbag_train.npy".format(path))
 	
 	bags = np.load("{0}/bags_128.npy".format(path))
 	print(bags.shape)
