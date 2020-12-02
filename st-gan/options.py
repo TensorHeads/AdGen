@@ -43,10 +43,15 @@ def set(training):
 	opt = parser.parse_args()
 
 	# ------ probably won't touch these ------
+	
+	## for original network
 	# opt.dataH,opt.dataW = 144,144
 	# opt.centerY,opt.centerX = 72,72
+
+	## for our new network
 	opt.dataH,opt.dataW = 128,128
 	opt.centerY,opt.centerX = 64,64
+
 	opt.warpDim = 8 if opt.warpType=="homography" else \
 				  6 if opt.warpType=="affine" else None
 	opt.warpApprox = 20
